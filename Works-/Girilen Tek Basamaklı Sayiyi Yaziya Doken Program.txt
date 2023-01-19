@@ -1,0 +1,37 @@
+	/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Final_Calismalari;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author PC
+ */
+public class Example2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Klavyeden girilen pozitif tamsayının hanelerini kelime olarak kodlayan program.
+        Scanner input = new Scanner(System.in);
+        int N ;
+        do
+        {
+            System.out.println("Pozitif tek basamaklı bir tamsayı girin");
+            N = input.nextInt();
+        }while(N<0 && N>=10 );
+        
+        String[]arr={"sıfır","bir","iki","üç","dört","beş","altı","yedi","sekiz","dokuz"};
+        for (int i = 0; i < 10; i++) {
+            if(N==i)
+            {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}

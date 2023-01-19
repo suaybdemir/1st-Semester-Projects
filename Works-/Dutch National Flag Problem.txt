@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Final_Calismalari;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author PC
+ */
+public class Dutch_National_Flag_Problem {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int N ;
+        
+        do
+        {
+            System.out.println("Bir dizi uzunlugu girin");
+            N = input.nextInt();
+        }while(N<=0);
+        
+        int[]arr= new int[N];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println((i+1)+" inci elemaının degerini giriniz");
+            arr[i]=input.nextInt();
+        }
+        sort(arr);
+        
+    }
+    public static void sort(int[] arr) {
+        if (arr == null) {
+            return;
+        }
+        int tmp;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                if(arr[i]>arr[j])
+                {
+                    tmp = arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=tmp;
+                }
+            }
+        }
+        print(arr);
+}
+    public static void print(int arr[])
+    {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println((i+1)+" inci dizinin elemanının degeri = "+arr[i]);
+        }
+    }
+    
+    
+}

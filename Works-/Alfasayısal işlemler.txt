@@ -1,0 +1,104 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Final_Calismalari;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author PC
+ */
+public class Example_alfa {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lutfen bir sayısal ifade giriniz");
+        String txt = input.nextLine();
+        
+        char ch = 'A';
+        char ch_1 = 'a';
+        
+        print_1(ch_1);
+        
+        print_1(ch);
+        
+        print(txt);
+        bir_harf_al(txt);
+        reverse(txt);
+        sesli_sessiz(txt);
+        
+           }
+    public static void print(String a)
+    {
+        System.out.println("Yazdırma "+a);
+        for (int i = 0; i < a.length() ; i++) {
+            System.out.println((i+1)+" inci ifadedeki harf = "+a.charAt(i));
+        }
+        if(a.equals("Demir"))
+        {
+            System.out.println("True"); 
+        }
+        else
+            System.out.println("False");
+        
+    }
+    public static void print_1(int b)
+    {
+        System.out.println("Yazdırma "+b);
+    }
+    public static void bir_harf_al(String a)
+    {
+        Scanner input = new Scanner(System.in);
+        int sayac = 0;
+        System.out.println("Bir harf giriniz");
+        char ch = input.nextLine().charAt(0);
+        
+        for (int i = 0; i < a.length(); i++) {
+            if(ch==a.charAt(i))
+            {
+                System.out.println((i+1)+" inci ifadede istenilen harf vardır");
+                sayac++;
+        }
+            }
+        
+        System.out.println( "istenilen harf "+sayac+" tane kadar ifadede vardır");
+        
+    }
+    public static void reverse(String a)
+    {
+        for (int i = a.length()-1 ; i>=0 ; i--) {
+            System.out.print(a.charAt(i));
+        }
+        System.out.println("");
+    
+    }
+    public static void sesli_sessiz(String a)
+    {
+        char[]sesli = {'a','e','i','o','u'};
+        int sayac = 0;
+        int[]yer= new int[255];
+        for (int i = 0; i < sesli.length; i++) {
+            char h = Character.toLowerCase(a.charAt(i));
+            for (int j = 0; j < sesli.length; j++) {
+                if(h==a.charAt(i))
+                {
+                    sayac++;
+                    yer[sayac]=i;
+                }
+            }
+        }
+        System.out.println(sayac+" Tane sesli harf vardır \n ve");
+        for (int i = 0; i < sayac; i++) {
+            System.out.println((yer[i]+1)+ ",");
+        }
+       
+    }
+    
+}

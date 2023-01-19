@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package my.works;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author PC
+ */
+public class work1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.println(" Bir pozirif sayi girin");
+        double para = input.nextDouble();
+        int deger = (int) para/200;
+        System.out.println(deger+" 200 luk banknot sayisi");
+        para =  para%200;
+        deger = (int) para/100 ;
+        int a = deger ;
+        System.out.println(deger+" 100 luk baknot sayısı");
+        para = para%100;
+        deger = (int)para/50;
+        int b = deger;
+        System.out.println(deger+" 50 lik baknot sayisi");
+        para = para%50;
+        deger = (int) para/20;
+        int c = deger;
+        System.out.println(deger+" 20 lik baknot sayisi");
+        para = para%20;
+        deger = (int) para/10;
+        int d = deger;
+        System.out.println(deger+" 10 luk baknot sayisi");
+        para = para%10;
+        deger = (int )para/5;
+        int e = deger;
+        System.out.println(deger+"5 lik baknot sayisi");
+        para = para%5;
+        deger = (int) para/1;
+        int f = deger;
+        System.out.println(deger+"1 lik banknot sayisi");
+        para = para%1;
+        deger = (int) para*100/50;
+        int g = deger;
+        System.out.println(deger+" 50 krsluk bozuk para sayisi");
+        para = para*100%50;
+        deger=(int) para/25;
+        int h = deger;
+        System.out.println(deger+" 25 krsluk bozuk para sayisi");
+        para =  para%25;
+        deger = (int) para/10;
+        int k = deger;
+        System.out.println(deger+" 10 krsluk bozuk para sayisi");
+        para = para%10;
+        deger = (int) para/5;
+        int l = deger;
+        System.out.println(deger+" 5 krsluk bozuk para sayisi");
+        System.out.println((a+b+c+d+e+f+g+h+k+l)+" toplamda bozuk para ya da baknot sayısı miktarıdır .");
+            
+        }
+       
+    
+        
+            
+        }
+}
