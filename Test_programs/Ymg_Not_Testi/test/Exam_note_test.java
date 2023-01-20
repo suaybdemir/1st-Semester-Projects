@@ -51,6 +51,7 @@ public class Exam_note_test {
         
         
     }
+    
     @Test
     public void avg3_generate()
     {

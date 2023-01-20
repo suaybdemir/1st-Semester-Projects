@@ -20,10 +20,11 @@ public class Girdiler {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
         Metodlar girdi = new Metodlar(80,40);
-        Metodlar isim = new Metodlar();
+        
         double avg = girdi.avg_generate();
-        double a =  isim.avg_generate();
+        
         String not = girdi.result();
+        
         System.out.println(" Ortalama "+avg);
         System.out.println(" Not "+not);
         
