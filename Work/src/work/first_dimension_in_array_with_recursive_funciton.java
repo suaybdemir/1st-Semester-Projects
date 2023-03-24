@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class Rest_of_num_in_array {
+public class first_dimension_in_array_with_recursive_funciton {
 
     /**
      * @param args the command line arguments
