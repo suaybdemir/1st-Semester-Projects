@@ -5,25 +5,34 @@
  */
 package week2_1;
 
+import java.util.Random;
+
+
 /**
  *
  * @author PC
  */
-public class CombSort {
+public class Combsort_efficient {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int arr[]=new int[1000];
+        Random r = new Random();
         
-        int arr[] ={1,5,3,4,6};
-        int n = 4;
-        combsort(arr,n);
+        for (int i = 0; i < 1000; i++) {
+            arr[i]= r.nextInt();
+        }
+        
+       int n = (int) (arr.length)+1;
+        comb_sort(arr,n);
         
     }
-    public static void combsort(int arr[],int n)
+    public static int[] comb_sort(int arr[],int n)
     {
+        long startTime = System.currentTimeMillis();
         int degisim = 1 , g , i , gap=n ;
         while ( (gap !=1 ) || (degisim==1) )
         {
@@ -43,13 +52,9 @@ public class CombSort {
                 degisim=1;
             }
         }
-        print(arr);
-    }
-    public static void print(int arr[])
-    {
-        for (int j = 0; j < arr.length; j++) {
-            System.out.println(arr[j]);
-        }
+        long finishTime = System.currentTimeMillis();
+        System.out.println(" Comb Sort su kadar surede : " + (finishTime - startTime) + " ms");
+        return arr;
     }
     
 }
